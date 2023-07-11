@@ -60,11 +60,15 @@ $(document).ready(function(){
         }
     });
 });
-// Get the button element
-const button = document.querySelector("button[type='submit']");
-button.addEventListener("click", function() {
-  const message = document.createElement("p");
-  message.textContent = "Submitted successfully!";
-  document.body.appendChild(message);
-});
 
+const button = document.querySelector("button[type='submit']");
+
+// Add a click event listener to the button
+button.addEventListener("click", function() {
+  // Display a success message
+  const successMessage = document.createElement("p");
+  successMessage.textContent = "Successfully submitted!";
+  
+  // Append the success message to the button's parent container
+  button.parentElement.appendChild(successMessage);
+});
