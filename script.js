@@ -60,3 +60,11 @@ $(document).ready(function(){
         }
     });
 });
+// Get the button element
+const button = document.querySelector("button[type='submit']");
+button.addEventListener("click", function() {
+  const message = document.createElement("p");
+  message.textContent = "Submitted successfully!";
+  document.body.appendChild(message);
+});
+
